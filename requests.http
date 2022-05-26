@@ -1,0 +1,36 @@
+GET http://localhost:4000/api/items
+
+###
+GET http://localhost:4000/api/items/1
+
+###
+POST http://localhost:4000/api/items
+Content-Type: application/json
+
+{
+    "name": "Salad",
+    "price": 219,
+    "description": "Fresh",
+    "image": "https://images.ctfassets.net/23aumh6u8s0i/5pnNAeu0kev0P5Neh9W0jj/5b62440be149d0c1a9cb84a255662205/whatabyte_salad-sm.png"
+}
+
+###
+
+PUT http://localhost:4000/api/items/1653573410575
+Content-Type: application/json
+
+{
+  "name": "Spicy Pizza",
+  "price": 599,
+  "description": "Blazing Good",
+  "image": "https://images.ctfassets.net/23aumh6u8s0i/2x1D2KeepKoZlsUq0SEsOu/bee61947ed648848e99c71ce22563849/whatabyte_pizza-sm.png"
+}
+
+###
+DELETE http://localhost:4000/api/items/1653573410575
+
+### 404 not found test, it should respond with the follow message: 'resource not found'
+
+GET http://localhost:4000/api/items
+
+
